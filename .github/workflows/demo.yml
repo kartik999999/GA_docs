@@ -1,0 +1,10 @@
+name: using jobs
+
+on: push
+
+jobs:
+  runner:
+    runs-on: [self-hosted, ubuntu-latest]
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World" 
