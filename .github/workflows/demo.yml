@@ -1,13 +1,13 @@
-name: using jobs
+# name: using jobs
 
-on:
-  push:
-    branches:
-      - dev
+# on:
+#   push:
+#     branches:
+#       - dev
 
-jobs:
-  runner:
-    runs-on: [self-hosted, ubuntu-latest]
-    steps:
-      - name: Print Hello World
-        run: echo "Hello World" 
+# jobs:
+#   runner:
+#     runs-on: [self-hosted, ubuntu-latest]
+#     steps:
+#       - name: Print Hello World
+#         run: echo "Hello World" 
