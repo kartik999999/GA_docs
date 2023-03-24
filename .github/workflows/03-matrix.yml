@@ -19,8 +19,8 @@ jobs:
           - os: windows-latest
             version: 12
         # os: [ubuntu-latest, windows-latest]
-    # runs-on: ubuntu-latest
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    # runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/setup-node@v3
         with:
