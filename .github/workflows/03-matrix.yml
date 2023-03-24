@@ -3,7 +3,7 @@ name: matrix jobs
 on: 
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   example_matrix:

@@ -1,0 +1,16 @@
+name: concurrency
+
+on:
+  push:
+    branches: 
+      - main
+
+concurrency:
+  group: build and test
+  # cancel-in-progress: true
+
+jobs:
+  print_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"

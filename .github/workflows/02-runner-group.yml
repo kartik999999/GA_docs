@@ -3,7 +3,12 @@ name: runner group
 on:
   push:
     branches:
-      - dev
+      - main
+
+concurrency:
+  group: build and test
+  # cancel-in-progress: true
+
 
 jobs:
   check-bats-version:
