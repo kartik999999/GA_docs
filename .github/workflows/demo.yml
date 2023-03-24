@@ -7,7 +7,7 @@ on:
 
 jobs:
   runner:
-    runs-on: [self-hosted, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
         run: echo "Hello World" 
