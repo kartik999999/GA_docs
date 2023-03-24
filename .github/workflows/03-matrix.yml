@@ -13,7 +13,11 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         include:
           - os: ubuntu-latest
-            version: [13,14]
+            # version: [13,14]
+            version: 13
+        exclude:
+          - os: windows-latest
+            version: 12
         # os: [ubuntu-latest, windows-latest]
     # runs-on: ubuntu-latest
     runs-on: ${{ matrix.os }}
