@@ -3,7 +3,7 @@ name: runner group
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   check-bats-version:

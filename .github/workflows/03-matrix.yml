@@ -1,0 +1,18 @@
+name: matrix jobs
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        version: [10,11,12]
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
