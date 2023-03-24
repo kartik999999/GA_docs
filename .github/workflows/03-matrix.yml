@@ -6,22 +6,33 @@ on:
       - main
 
 jobs:
-  example_matrix:
-    strategy:
-      matrix:
-        version: [10,11,12]
-        os: [ubuntu-latest, windows-latest]
-        include:
-          - os: ubuntu-latest
-            # version: [13,14]
-            version: 13
-        exclude:
-          - os: windows-latest
-            version: 12
-        # os: [ubuntu-latest, windows-latest]
+  # example_matrix:
+  #   strategy:
+  #     matrix:
+  #       version: [10,11,12]
+  #       os: [ubuntu-latest, windows-latest]
+  #       include:
+  #         - os: ubuntu-latest
+  #           # version: [13,14]
+  #           version: 13
+  #       exclude:
+  #         - os: windows-latest
+  #           version: 12
+  #       # os: [ubuntu-latest, windows-latest]
+  #   runs-on: ubuntu-latest
+  #   # runs-on: ${{ matrix.os }}
+  #   steps:
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.version }}
+   test:
     runs-on: ubuntu-latest
-    # runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.version }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: true
+      matrix:
+        version: [6, 7, 8]
+        experimental: [false]
+        include:
+          - version: 9
+            experimental: true
