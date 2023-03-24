@@ -1,0 +1,24 @@
+name: container job
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  container_test_job:
+    #runner
+    runs-on: ubuntu-latest
+    #container
+    container:
+      image: node:14.16
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:/volume_mount
+      options: --cpus 1
+    #steps
+    steps: 
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)

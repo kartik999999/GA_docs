@@ -3,11 +3,11 @@ name: concurrency
 on:
   push:
     branches: 
-      - main
+      - dev
 
 concurrency:
   group: build and test
-  # cancel-in-progress: true
+  cancel-in-progress: true
 
 jobs:
   print_hello:
