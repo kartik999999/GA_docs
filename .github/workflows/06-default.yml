@@ -3,7 +3,7 @@ name: default
 on:
   push:
     branches:
-      - main
+      - dev
 
 # defaults:
 #       run: 
@@ -20,3 +20,4 @@ jobs:
     steps:
       - name: print Hello World
         run: echo "Hello World"
+    
