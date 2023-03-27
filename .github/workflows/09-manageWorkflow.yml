@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-    skip-checks:true
+  # skip-checks:true
   # workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: step1
         id: step1
-        run: echo "test=hello" >> $GITHUB_OUTPUT
+        run: echo "test=helloo" >> $GITHUB_OUTPUT
       - name: step2
         id: step2
         run: echo "test=world" >> $GITHUB_OUTPUT
