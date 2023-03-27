@@ -16,7 +16,7 @@ jobs:
     defaults:
       run: 
         shell: bash
-        working-directory: scripts
+        # working-directory: scripts
     steps:
       - name: print Hello World
         run: echo "Hello World"
