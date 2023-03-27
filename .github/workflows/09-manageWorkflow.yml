@@ -3,7 +3,8 @@ name: manageWorkflows
 on:
   push:
     branches:
-      - dev
+      - main
+    skip-checks:true
   # workflow_dispatch:
 
 jobs:

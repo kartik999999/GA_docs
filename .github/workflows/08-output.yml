@@ -3,7 +3,7 @@ name: output
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   job1:
