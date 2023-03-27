@@ -1,4 +1,4 @@
-name: manageWOrlflow
+name: manageWorkflows
 
 on:
   # push:
