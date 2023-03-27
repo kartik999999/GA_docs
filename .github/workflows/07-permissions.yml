@@ -3,14 +3,14 @@ name: permissions
 on:
   push:
     branches:
-      - main
+      - dev
 
 permissions: read-all 
 
 jobs:
   permissions_job:
     runs-on: ubuntu-latest
-    permissions: write-all
+    # permissions: write-all
     steps:
       - name: print hello World
         run: echo "Hello World"
