@@ -1,0 +1,22 @@
+name: default
+
+on:
+  push:
+    branches:
+      - main
+
+# defaults:
+#       run: 
+#         shell: bash
+#         working-directory: scripts
+
+jobs:
+  default_jobs:
+    runs-on: ubuntu-latest
+    defaults:
+      run: 
+        shell: bash
+        working-directory: scripts
+    steps:
+      - name: print Hello World
+        run: echo "Hello World"

@@ -2,7 +2,7 @@ name: container job
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   container_test_job:
